@@ -12,14 +12,14 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
-import { CiSquareChevDown } from "react-icons/ci";
+import { FaAngleDown } from "react-icons/fa";
 
 const NavBar = () => {
   return (
     <div>
       <Heading>Logo</Heading>
       <Menu>
-        <MenuButton as={Button} rightIcon={<CiSquareChevDown />}>
+        <MenuButton as={Button} rightIcon={<FaAngleDown />}>
           Actions
         </MenuButton>
         <MenuList>
