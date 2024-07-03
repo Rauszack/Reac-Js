@@ -5,13 +5,17 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 
 function App() {
- 
-
   return (
-    <>
-    <NavBar />
-    <ItemListContainer title='Tienda' />    
-    </>
+    
+  <ChakraProvider>
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route path='/' element={<ItemListContainer/>} />
+      <Route path='/categorias/:categoryId' element={<ItemListContainer />} />
+    </Routes>
+    </BrowserRouter>    
+  </ChakraProvider>
   )
 }
 
