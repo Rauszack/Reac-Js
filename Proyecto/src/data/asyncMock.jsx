@@ -1,46 +1,53 @@
 import { filter } from "@chakra-ui/react"
-
-[
+export const productos = [
     { 
         id: 1,
         img: "./img/duende1.jpg",
         nombre: "Producto1",
-        precio: 500
+        categoria: "rubio",
+        precio: 500,
         },{ 
         id: 2,
         img: "./img/duende2.jpg",
-        nombre: "Producto2",
-        precio: 500
+        nombre: "Producto2",        
+        categoria: "rubio",
+        precio: 500,
         },{ 
         id: 3,
         img: "./img/duende3.jpg",
-        nombre: "Product03",
-        precio: 500
+        nombre: "Product03",        
+        categoria: "rosa",
+        precio: 500,
         },{ 
         id: 4,
         img: "./img/duende4.jpg",
         nombre: "Producto4",
+        categoria: "rosa",
         precio: 700
         },{ 
         id: 5,
         img: "./img/duende5.jpg",
         nombre: "Producto5",
-        precio: 900
+        categoria: "brujita",
+        precio: 900,
         },{ 
         id: 6,
         img: "./img/duende6.jpg",
         nombre: "Producto6",
-        precio: 900
+        categoria: "brujita",
+        precio: 900,
         },{ 
-    id: 7,
-    img: "./img/duende7.jpg",
-    nombre: "Producto7",
-    precio: 1000
-    },{ 
-    id: 8,
-    img: "./img/duende8.jpg",
-    nombre: "Producto8",
-    precio: 1000
+        id: 7,
+        img: "./img/duende7.jpg",
+        nombre: "Producto7",
+        categoria: "piña",
+        precio: 1000,
+        },{ 
+        id: 8,
+        img: "./img/duende8.jpg",
+        nombre: "Producto8",
+        categoria: "brujita",
+        precio: 1000,
     }
 ]
 
@@ -58,6 +65,15 @@ export const getProductsByCategory = (categoria) => {
         const productosFiltrados = productos.filter((prod)=> prod.categoria === categoria)
         setTimeout(() => {
             resolve(productosFiltrados)
+        },2000)
+    })
+}
+
+export const getProductsById = (id) => {
+    return new Promise((resolve) => {
+    const productoFiltrado = producto.find((prod) => prod.id === parseInt(id))
+    setTimeout(()=> {
+        resolve(productoFiltrado)
         },2000)
     })
 }
