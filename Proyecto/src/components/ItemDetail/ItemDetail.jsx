@@ -1,9 +1,9 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text,Button, ButtonGroup, Divider, Image } from '@chakra-ui/react'
-import ItemCount from '../ItemCount/ItemCount';
+import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image } from '@chakra-ui/react'
+import ItemCount from '../../components/ItemCount/ItemCount';
 import { ToastContainer, toast } from 'react-toastify';
 
-const ItemDetail = ({ nombre, categoria, id, img, precio }) => {
+const ItemDetail = ({ nombre, categoria, id, img, stock, precio }) => {
   
   const onAdd = (quantity) => {
     toast(`Agregaste ${quantity} productos`)

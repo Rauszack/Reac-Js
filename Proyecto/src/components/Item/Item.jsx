@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text,Button, Bu
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
-const Item = ({nombre, id, img, precio, stock}) => {
+const Item = ({ id, img, nombre, precio, stock}) => {
   return (
 <Card maxW='sm' m={3}>
   <CardBody>
@@ -27,8 +27,9 @@ const Item = ({nombre, id, img, precio, stock}) => {
   <CardFooter>
     <ButtonGroup spacing='2'>
       <Button variant='ghost' colorScheme='blue'>
-        <Link to={`/producto/${id}`}>Ver detalle</Link>
+        <Link to={`/productos/${id}`}>Ver detalle</Link>
       </Button>
+      <ItemCount initialValue={1} stock={stock}/>
     </ButtonGroup>
   </CardFooter>
 </Card>
