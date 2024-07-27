@@ -3,9 +3,9 @@ import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text,Button, Bu
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
-const Item = ({ id, img, nombre, precio, stock}) => {
+const Item = ({nombre, id, img, precio, stock}) => {
   return (
-<Card maxW='sm' m={3}>
+<Card maxW='sm' m={3} >
   <CardBody>
     <Image
       src={img}
@@ -16,9 +16,9 @@ const Item = ({ id, img, nombre, precio, stock}) => {
       borderRadius='lg'
     />
     <Stack mt='6' spacing='3'>
-      <Heading size='md'>{nombre}</Heading>
+      <Heading size='md'color={'blanchedalmond'}>{nombre}</Heading>
 
-      <Text color='blue.600' fontSize='2xl'>
+      <Text color={'blanchedalmond'} fontSize='2xl'>
         ${precio}
       </Text>
     </Stack>
@@ -26,10 +26,14 @@ const Item = ({ id, img, nombre, precio, stock}) => {
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='ghost' colorScheme='blue'>
-        <Link to={`/productos/${id}`}>Ver detalle</Link>
+      <Button 
+        variant='ghost' 
+        background={'#191520'} 
+        color={'blanchedalmond'}
+        _hover={{ bg: '#D2A567', cursor: 'pointer' }}
+        >
+        <Link to={`/producto/${id}`}>Ver detalle</Link>
       </Button>
-      <ItemCount initialValue={1} stock={stock}/>
     </ButtonGroup>
   </CardFooter>
 </Card>

@@ -1,40 +1,66 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import Logo from '/vite.svg'
+
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Heading,
   Button,
   Flex,
+  Image,
 } from "@chakra-ui/react";
 import { FaAngleDown } from "react-icons/fa";
 import './NavBar.css'
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png'
 
 const NavBar = () => {
   return (
-    <Flex className="navBar" justify={'space-between'} align={'center'} height={'10vh'} w={'100%'} >
-      <Heading ml={4}><Link to='./'>Logo</Link></Heading>
-      <Menu>
-        <MenuButton as={Button} rightIcon={<FaAngleDown />}>
-          Categorias
+    <Flex className="navBar" justify={'space-between'} align={'center'} height={'10vh'} w={'100%'} bg={'#222831'}>
+        <Heading color={'#F7EEF1'} ml={4}><Link to='/'><Image w={'20%'} src={logo}/></Link></Heading>
+        <Menu>
+        <MenuButton as={Button} color={'#191520'} rightIcon={<FaAngleDown />}>
+            Categoría
         </MenuButton>
         <MenuList>
-          <MenuItem><Link to='/categorias/:rubio'>rubio</Link></MenuItem>
-          <MenuItem><Link to='/categorias/:rosa'>rosa</Link></MenuItem>
-          <MenuItem><Link to='/categorias/:brujita'>brujita</Link></MenuItem>
-          <MenuItem><Link to='/categorias/:piña'>piña</Link></MenuItem>
+            <MenuItem 
+              color={'#191520'}
+              _hover={{ bg: '#191520', color: 'blanchedalmond' }}
+              >
+              <Link to='/categoría/rubio'>
+              rubio
+              </Link>
+            </MenuItem>
+            <MenuItem 
+              color={'#191520'}
+              _hover={{ bg: '#191520', color: 'blanchedalmond' }}
+              >
+              <Link to='/categoría/rosa'>
+              rosa
+              </Link>
+            </MenuItem>
+            <MenuItem 
+              color={'#191520'}
+              _hover={{ bg: '#191520', color: 'blanchedalmond' }}
+              >
+              <Link to='/categoría/brujita'>
+              brujita
+              </Link>
+            </MenuItem>
+            <MenuItem 
+              color={'#191520'}
+              _hover={{ bg: '#191520', color: 'blanchedalmond' }}
+              >
+              <Link to='/categoría/piña'>
+              piña
+              </Link>
+            </MenuItem>
         </MenuList>
-      </Menu>
-      <CartWidget />
-    </Flex> 
+        </Menu>
+        <CartWidget />
+    </Flex>
   );
 };
 
