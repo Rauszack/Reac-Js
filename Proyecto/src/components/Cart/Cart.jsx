@@ -27,7 +27,7 @@ const Cart = () => {
         return(
             <Flex direction={'column'} justify={'center'} align={'center'} mt={10}>
                 <Text>Todavía no agregaste productos al carrito</Text>
-                <ChakraLink as={Link} to='/' color={'#114F5A'}>Ver productos</ChakraLink>
+                <ChakraLink as={Link} to='/' color={'#191520'}>Ver productos</ChakraLink>
             </Flex>
         )
     }else {

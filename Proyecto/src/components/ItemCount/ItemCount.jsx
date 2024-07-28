@@ -15,7 +15,7 @@ const ItemCount = ({initialValue, stock, onAdd}) => {
           >
             -
         </Button>
-        <Heading mx={3} color={'blanchedalmond'}>{count}</Heading>
+        <Heading mx={3} color={'#191520'}>{count}</Heading>
         <Button 
           onClick={incrementar}
           background={'#191520'} 

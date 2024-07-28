@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text,Button, ButtonGroup, Divider, Image, Flex, Link as ChakraLink } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image, Flex, Link as ChakraLink } from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify';
 import Context from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { MdOutlineShoppingCartCheckout, MdOutlineShoppingBag  } from "react-icons/md";
 
-const ItemDetail = ({ nombre, descripcion, id, img, precio, stock, categoria}) => {
+const ItemDetail = ({ nombre, id, img, precio, stock, categoria}) => {
   const [ quantity, setQuantity ] = useState(0)
   const { addItem } = useContext(Context)
 
@@ -25,7 +25,7 @@ const ItemDetail = ({ nombre, descripcion, id, img, precio, stock, categoria}) =
     <>
       <Card w={'80%'} h={'100%'} boxShadow='lg' mt={10} >
           <Flex bg={'#3F747D'} h={'5rem'} justify={'flex-start'} align={'center'} borderRadius={'5px 5px 0 0'} >
-          <Text ml={2} fontSize="md" color="#191520">Categoría: {categoria}</Text>
+          <Text ml={2} fontSize="md" color="#191520">Categoria: {categoria}</Text>
 
           </Flex>
           <Flex
@@ -63,9 +63,6 @@ const ItemDetail = ({ nombre, descripcion, id, img, precio, stock, categoria}) =
                   minHeight={'400px'}
                   >
               <Heading size="xl" color="#F3F3EF" h={'4rem'}  > {nombre}</Heading>
-              <Text color="#F3F3EF" fontSize="xl" w={'95%'}  >
-                  {descripcion}
-              </Text>
               <Text color="#3F74F3F3EF7D" fontSize="2xl"  >
                   ${precio}
               </Text>

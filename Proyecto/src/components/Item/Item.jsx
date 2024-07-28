@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text,Button, ButtonGroup, Divider, Image } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, ButtonGroup, Divider, Image } from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
@@ -16,9 +16,9 @@ const Item = ({nombre, id, img, precio, stock}) => {
       borderRadius='lg'
     />
     <Stack mt='6' spacing='3'>
-      <Heading size='md'color={'blanchedalmond'}>{nombre}</Heading>
+      <Heading size='md'color={'#191520'}>{nombre}</Heading>
 
-      <Text color={'blanchedalmond'} fontSize='2xl'>
+      <Text color={'#191520'} fontSize='2xl'>
         ${precio}
       </Text>
     </Stack>

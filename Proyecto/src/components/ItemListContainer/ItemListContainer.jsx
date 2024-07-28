@@ -17,7 +17,7 @@ const ItemListContainer = ({ title }) => {
         const coleccion = collection(db, 'productos')
 
         const queryRef = !categoryId ? 
-        coleccion : query(coleccion, where('categoría', '==', categoryId))
+        coleccion : query(coleccion, where('categoria', '==', categoryId))
 
         const response = await getDocs(queryRef)
         const products = response.docs.map((doc) => {
